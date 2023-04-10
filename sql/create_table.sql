@@ -1,12 +1,9 @@
 # 建表脚本
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
-
 -- 创建库
-create database if not exists my_db;
+create database if not exists search;
 
 -- 切换库
-use my_db;
+use search;
 
 -- 用户表
 create table if not exists user
@@ -25,6 +22,19 @@ create table if not exists user
     isDelete     tinyint      default 0                 not null comment '是否删除',
     index idx_unionId (unionId)
 ) comment '用户' collate = utf8mb4_unicode_ci;
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('姚子涵', '9', '范博超', '初中');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('杜琪', '857174371', '许文昊', '高中');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('杨智宸', '81', '江鸿煊', '博士');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('谢伟诚', '6312828738', '龚志强', '小学');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('林泽洋', '185641', '史炎彬', '博士');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('毛泽洋', '992796821', '石琪', '博士');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('卢天翊', '683002', '沈乐驹', '本科');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('许彬', '167822288', '廖昊强', '小学');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('魏懿轩', '458', '赖瑾瑜', '博士');
+insert into `user` (`userAccount`, `userPassword`, `userName`, `userProfile`) values ('史晟睿', '361', '李语堂', '高中');
+
+
+
 
 -- 帖子表
 create table if not exists post
