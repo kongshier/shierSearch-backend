@@ -242,6 +242,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
                 postIdList.forEach(postId -> {
                     if (idPostMap.containsKey(postId)) {
                         //resourceList.add(idPostMap.get(postId).get(0));
+                        // 高亮显示
                         Post post = idPostMap.get(postId).get(0);
                         String contentHighLight = postIdContentHighLight.get(postId);
                         if (StrUtil.isNotBlank(contentHighLight)) {
