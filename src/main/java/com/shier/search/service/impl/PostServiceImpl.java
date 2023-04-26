@@ -253,7 +253,6 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
                         String delete = elasticsearchRestTemplate.delete(String.valueOf(postId), PostEsDTO.class);
                         log.info("delete post {}", delete);
                     }
-
                 });
             }
         }
